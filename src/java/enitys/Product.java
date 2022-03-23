@@ -16,7 +16,6 @@ public class Product implements Serializable {
     private Long id;
     private String title;
     private String description;
-    private String brand;
     private int size;
     private double price;
 
@@ -47,14 +46,6 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     public int getSize() {
         return size;
     }
@@ -73,7 +64,7 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return "Product{" + "id=" + id + ", title=" + title + ", description=" + description + ", brand=" + brand + ", size=" + size + ", price=" + price + '}';
+        return "Product{" + "id=" + id + ", title=" + title + ", description=" + description + ", size=" + size + ", price=" + price + '}';
     }
 
     @Override
@@ -82,7 +73,6 @@ public class Product implements Serializable {
         hash = 47 * hash + Objects.hashCode(this.id);
         hash = 47 * hash + Objects.hashCode(this.title);
         hash = 47 * hash + Objects.hashCode(this.description);
-        hash = 47 * hash + Objects.hashCode(this.brand);
         hash = 47 * hash + this.size;
         hash = 47 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
         return hash;
@@ -110,9 +100,6 @@ public class Product implements Serializable {
             return false;
         }
         if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.brand, other.brand)) {
             return false;
         }
         if (!Objects.equals(this.id, other.id)) {
