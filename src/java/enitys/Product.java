@@ -18,6 +18,7 @@ public class Product implements Serializable {
     private String description;
     private int size;
     private double price;
+    private int quantity;
 
     public Product() {
     }
@@ -62,19 +63,28 @@ public class Product implements Serializable {
         this.price = price;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public String toString() {
-        return "Product{" + "id=" + id + ", title=" + title + ", description=" + description + ", size=" + size + ", price=" + price + '}';
+        return "Product{" + "id=" + id + ", title=" + title + ", description=" + description + ", size=" + size + ", price=" + price + ", quantity=" + quantity + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 47 * hash + Objects.hashCode(this.id);
-        hash = 47 * hash + Objects.hashCode(this.title);
-        hash = 47 * hash + Objects.hashCode(this.description);
-        hash = 47 * hash + this.size;
-        hash = 47 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
+        int hash = 3;
+        hash = 61 * hash + Objects.hashCode(this.id);
+        hash = 61 * hash + Objects.hashCode(this.title);
+        hash = 61 * hash + Objects.hashCode(this.description);
+        hash = 61 * hash + this.size;
+        hash = 61 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
+        hash = 61 * hash + this.quantity;
         return hash;
     }
 
@@ -94,6 +104,9 @@ public class Product implements Serializable {
             return false;
         }
         if (Double.doubleToLongBits(this.price) != Double.doubleToLongBits(other.price)) {
+            return false;
+        }
+        if (this.quantity != other.quantity) {
             return false;
         }
         if (!Objects.equals(this.title, other.title)) {

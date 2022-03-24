@@ -23,7 +23,7 @@ import tools.PasswordProtector;
     "/login",
     "/logout",
     "/showRegistration",
-    "/registartion"
+    "/registration"
 })
 public class LoginServlet extends HttpServlet {
     @EJB UserFacade userFacade;
@@ -182,7 +182,7 @@ public class LoginServlet extends HttpServlet {
                 ur.setUser(newUser);
                 userRolesFacade.create(ur);
                 request.setAttribute("info", "Привет, "+newUser.getFirstName()+"! Авторизуйтесь");
-                request.getRequestDispatcher("/listProducts.jsp").forward(request, response);
+                request.getRequestDispatcher("/showLogin").forward(request, response);
                 break;
         }
         

@@ -20,16 +20,17 @@ import javax.servlet.http.HttpSession;
  *
  * @author pupil
  */
-@WebServlet(name = "CustomerServlet", urlPatterns = {
-    "/listProducts"
+@WebServlet(name = "adminServlet", urlPatterns = {
+    
 })
-public class CustomerServlet extends HttpServlet {
-    @EJB private UserRolesFacade userRolesFacade;
+public class adminServlet extends HttpServlet {
+    @EJB UserRolesFacade userRolesFacade;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
+        
         HttpSession session = request.getSession(false);
         if(session == null){
             request.setAttribute("info", "Авторизуйтесь!");
@@ -40,7 +41,7 @@ public class CustomerServlet extends HttpServlet {
             request.setAttribute("info", "Авторизуйтесь!");
             request.getRequestDispatcher("/showLogin").forward(request, response);
         }
-        if(!userRolesFacade.isRole("CUSTOMER", authUser)){
+        if(!userRolesFacade.isRole("ADMINISTRATOR", authUser)){
             request.setAttribute("info", "У вас нет прав!");
             request.getRequestDispatcher("/showLogin").forward(request, response);
         }
@@ -48,9 +49,7 @@ public class CustomerServlet extends HttpServlet {
         
         String path = request.getServletPath();
         switch(path) {
-            case "/listProducts":
-                request.getRequestDispatcher("/WEB-INF/listProducts.jsp").forward(request, response);
-                break;
+            
         }
     }
 

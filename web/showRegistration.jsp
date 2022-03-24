@@ -26,11 +26,11 @@
                 </div>
                 <div class="form-group col">
                     <label class="form-label mt-4">Пароль</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Введите пароль">
+                    <input type="password" class="form-control" id="password" name="password1" placeholder="Введите пароль">
                 </div>
                 <div class="form-group col">
                     <label class="form-label mt-4">Подтверждение пароля</label>
-                    <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Повторите пароль">
+                    <input type="password" class="form-control" id="passwordConfirm" name="password2" placeholder="Повторите пароль">
                 </div>
             </div>
         </div>
