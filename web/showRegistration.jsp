@@ -12,11 +12,11 @@
                 </div>
                 <div class="form-group col">
                     <label class="form-label mt-4">Фамилия</label>
-                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Введите фамилию">
+                    <input type="text" class="form-control" id="sureName" name="sureName" placeholder="Введите фамилию">
                 </div>
                 <div class="form-group col">
                     <label class="form-label mt-4">Телефон</label>
-                    <input type="text" class="form-control" id="tel" name="tel" placeholder="Введите телефон">
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Введите телефон">
                 </div>
             </div>
             <div class="row gx-5">
