@@ -38,9 +38,9 @@ public class LoginServlet extends HttpServlet {
         }
         
         User user = new User();
-        user.setFirstName("Dmitrii");
-        user.setSureName("Kreivald");
-        user.setPhone("+37254897768");
+        user.setFirstName("Aleksei");
+        user.setSureName("Karimov");
+        user.setPhone("+37253322480");
         user.setLogin("admin");
         PasswordProtector passwordProtector = new PasswordProtector();
         String salt = passwordProtector.getSalt();

@@ -15,6 +15,29 @@
         </div>
         <input class="btn btn-primary mt-5" type="submit" value="Войти">
         <h4 class="w-100 text-center my-3"><a href="showRegistration">Зарегистрироваться</a></h4>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <h1></h1>
+        <p></p>
+        <p></p>
       </div>
     </form>
 </div>
